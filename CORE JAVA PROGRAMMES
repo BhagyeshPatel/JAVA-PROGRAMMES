@@ -1,0 +1,722 @@
+abstract class Flyable{
+	abstract void start();
+	abstract void fly();
+	abstract void run();
+	public void firstAdd(){
+		System.out.println("first aid");
+	}
+}
+class Helicopter extends Flyable{
+	public void start(){
+		System.out.println("It is started;");
+	}
+	public void fly(){
+		System.out.println("It is flying;");
+	}
+	public void run(){
+		System.out.println("It is running;");
+	}
+}
+class Aeroplane extends Flyable{
+	public void start(){
+		System.out.println("It is started;");
+	}
+	public void fly(){
+		System.out.println("It is flying;");
+	}
+	public void run(){
+		System.out.println("It is running;");
+	}
+}
+class Jet extends Flyable{
+	public void start(){
+		System.out.println("It is started;");
+	}
+	public void fly(){
+		System.out.println("It is flying;");
+	}
+	public void run(){
+		System.out.println("It is running;");
+	}
+}
+class Abstract{
+	public static void main(String[] felight){
+		Aeroplane a = new Aeroplane();
+		Jet j = new Jet();
+		a.firstAdd();
+		a.fly();
+		j.firstAdd();
+		j.fly();
+		 
+	}
+}
+class Exception{
+	public static void main(String[] felight){
+		System.out.println("try1");
+		System.out.println("try2");
+		try{
+			System.out.println(div(10,0));
+			int a[] = new int[5];
+			a[5] = 13;
+			System.out.println(a[5]);
+		}catch(ArithmeticException ex){
+			System.out.println(ex);
+		}catch(ArrayIndexOutOfBoundsException ex){
+			System.out.println(ex);
+		}finally{
+			System.out.println("finally block always execute");
+		}	
+		System.out.println("try4");
+		System.out.println("try5");
+	}
+	public static int div(int n1,int n2){
+		int n3 = n1/n2;
+		return n3;
+	}     
+}      
+
+Created class call for all programs
+//import java.lang.Math;
+class call
+{
+	public static int grep(int i)
+  {
+	  int n=0;
+	  int k=0,j=0,h=0;
+	//while(p>0)
+    //{
+		//p=p/10;
+      //  n++;		
+	//}
+      if(i>0)
+	  {
+		 // k=int((Math.pow(10,n))* i);
+		  k=(1000 * i);
+		  j=i%10;
+		  i=i/10;
+		  h=(i*10)+j;
+		  k=k+h;
+		  
+	  }
+      return k;	  
+  }
+   public static int hund(int i)
+  {
+	  int n=i;
+	while(n>=i)
+    {
+		n=n%1000;
+		n=n/100;
+       		
+	}
+        return n;	
+  }
+  public static float grrate(float a,float b,float c,float d)
+  {
+	  float e = 0,f=0;
+	  e=(a-c);
+	  f=(b-d);
+	  float g = e/f;
+	  return g;
+	  
+  }
+  public static double gdeci(double a,double b,double c)
+  {
+	  double d=0,e=0,f=0,g=0,h=0;
+	  d=a*100;
+	  e=b*10;
+	  f=c+e;
+	  g=f+d;
+	  h=g/100;
+	  return h;
+	  
+  }
+  public static int gs2d(int a)
+  {
+	  int i=0,j=0,k=0;
+	  if(a>0)
+	  {
+		  k=(i=a/10)+(j=a%10);
+	  }
+	  return k;
+  }
+  public static boolean gbln(boolean a,boolean b,boolean c)
+  {
+	  if(a==true&&b==true&&c==true)
+		  return true;
+	  else 
+		  return false;
+  }
+  public static boolean gwif(int a,int b,int c)
+  {
+	  return (a>b||a>c) ? true : false;
+  }
+  public static boolean gwif1(int a,int b,int c)
+  {
+	  return (((a<b)&&(a<c))&&(b<c)) ? true : false;
+  }
+  public static int gsl4(int n)
+  {
+	  int sum=0,p=0;
+	  while (n != 0 && p<4 )
+		  {
+            sum += n % 10;
+             p++;
+             n /= 10;
+           }
+		return sum;
+  }
+  public static float gaofs(int x1,int y1,int x2,int y2)
+  {
+	  float d=(float)Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+	  float a=(d*d)/2;
+	  return a;
+  }
+  public static boolean gdiv1(int a)
+  {
+	 return ((a%3==0)||(a%7==0)) ? true : false; 
+  }
+  public static int grmax(int x,int y,int z)
+  {
+	  return ((x>y)&&(x>z)) ? x : ((y>x)&&(y>z)) ? y : z;
+  }
+  public static int gdaym(int a)
+  {
+	  return ((a!=2)&&(a%2!=0)) ? 31 : ((a!=2)&&(a%2==0)) ? 30 : 28;
+  }
+  public static char gc(char b)
+  {
+	  return b-=32;
+  }
+  public static char gcc(char b)
+  {
+	  return b+=32;
+  }
+  public static boolean gdd(char a)
+  {
+	  return ((a>47)&&(a<58)) ? true : false;
+  }
+  public static char gfindm(char a,char b,char c)
+  {
+	  return (((a>b)&&(a<c))||((a>c)&&(a<b))) ? a : (((b>a)&&(b<c))||((b>c)&&(b<a))) ? b : c;
+  }
+  public static boolean gsameld(int a,int b)
+  {
+	 return ((a%10)==(b%10)) ? true : false;
+  }
+  public static boolean gsameld1(int a,int b,int c)
+  {
+	 return ((a+b==c)||(b+c==a)||(a+c==b)) ? true : false;
+  }
+  public static int glottery(int a)
+  {
+	  return ((a%4==0)&&(a%7==0)) ? 20 : (a%4==0) ? 6 : (a%7==0) ? 10 : 0;
+	 // return (a%4==0) ? 6 : (a%7==0) ? 10 : ((a%4==0)&&(a%7==0)) ? 20: 0;
+  }
+  public static int grev(int n)
+  {
+	  int reverse=0;
+	   while( n != 0 )
+      {
+          reverse = reverse * 10;
+          reverse = reverse + n%10;
+          n = n/10;
+      }
+	  return reverse;
+  }
+  public static boolean gper(int n)
+  {
+	 int sum = 0;
+        for(int i = 1; i < n; i++)
+        {
+            if(n % i == 0)
+            {
+                sum = sum + i;
+            }
+        }
+        return (sum==n) ? true : false;
+  }
+  public static int glottery1(int a,int b,int c)
+  {
+	  int s=0,h=0,i=0,j=0;
+	  h = ((a%4==0)&&(a%7==0)) ? 20 : (a%4==0) ? 6 : (a%7==0) ? 10 : 0;
+	  i = ((b%4==0)&&(b%7==0)) ? 20 : (b%4==0) ? 6 : (b%7==0) ? 10 : 0;
+	  j = ((c%4==0)&&(c%7==0)) ? 20 : (c%4==0) ? 6 : (c%7==0) ? 10 : 0;
+	  s=h+i+j;
+	  return s;
+	  
+  }
+
+
+ }
+
+
+
+Q1  addition of two numbers 
+
+class add{
+	public static int addd(int n1,int n2){
+		int sum = n1+n2;
+		return sum;
+	}
+	public static void main(String[] felligt){
+		int result = addd(10,10);
+		System.out.println("sum is:" + result);
+	}
+}
+
+o/p:
+ 
+
+
+Q2  add two double number
+
+class doubl{
+	public static double addd(double n1,double n2){
+		double sum = n1+n2;
+		return sum;
+	}
+	public static void main(String[] felligt){
+		double result = addd(1.1,100.5);
+		System.out.println("sum is:" + result);
+	}
+}
+
+
+
+o/p:
+
+
+ 
+
+Q3 calculate speed
+
+class td{
+public static double speed(double t,double d){
+double s = (d/t);
+return s;
+}
+public static void main(String[] felight)
+{
+    double r = speed(2.5,100.45);
+   System.out.println("value of speed is: " + r );	
+}
+}
+
+
+o/p:
+
+ 
+Q4 area of circle
+
+class circle{
+	public static double felligh(double r){
+		double res = 3.14 *  r * r;
+		return res;
+	} 
+	public static void main(String[] felight){
+		double a = felligh(3.2);
+		System.out.println("area  of circle is :" + a);
+		
+	}
+}
+o/p:
+ 
+
+Q5 find factorial 
+
+class fec{
+	public static int felligh(int r){
+		int res = 1;
+		for(int n=r;n>=1;n--){
+		res = res * n;	
+		}
+		return res;	
+	} 
+	public static void main(String[] felight){
+		int a = felligh(9);
+		System.out.println("factoriall of number is :" + a);
+		
+	}
+}
+
+o/p:
+
+ 
+
+
+Q 6 find number is even then return true else false
+class eo{
+	public static boolean  feligh(int n){
+		if(n % 2 == 0)
+			return true;
+			else 
+				return false;
+		
+	}
+	public static void main(String[] felight){
+		boolean r = feligh(11);
+		System.out.println(r);
+		}
+}
+o/p:
+ 
+
+Q7  if number is odd  return true else false
+class oe{
+	public static boolean  feligh(int n){
+		if(n % 2!= 0)
+			return true;
+			else 
+				return false;
+		
+	}
+	public static void main(String[] felight){
+		boolean r = feligh(24);
+		System.out.println(r);
+		}
+}
+o/p:
+ 
+
+
+
+Q8 : if number is prime return true
+class prime1{
+public static void main(String[] felight){
+   boolean r = add(23);
+   System.out.println(r);
+}
+public static boolean add(int i){
+	int  n,counter = 0;
+	   for(n=i; n>=1; n--)
+	  {
+             if(i%n==0)
+	     {
+ 		counter = counter + 1;
+	     }
+	  }
+	  if (counter ==2)
+	  {
+	     return true;
+	  }
+	    else
+           return false;			
+}
+}
+o/p:
+
+
+ 
+
+Q9 if number is pilindrrome return true else false
+class pilin{
+public static void main(String[] felight){
+   boolean r = add(1221);
+   System.out.println(r);
+}
+public static boolean add(int i){
+	int temp=0,sum=0,r;
+	       temp=i;    
+  while(i>0){    
+   r=i%10;   
+   sum=(sum*10)+r;    
+   i=i/10;    
+  }    
+  if(temp==sum){    
+  return true;   
+  }   
+  else    
+    return false;
+}
+}
+
+o/p:
+
+
+ 
+
+Q 10: fibonacci series
+public class fibona{
+   public static long fibonacci(long number) {
+      if ((number == 0) || (number == 1))
+         return number;
+      else
+         return fibonacci(number - 1) + fibonacci(number - 2);
+   }
+   public static void main(String[] args) {
+      for (int counter = 0; counter < 10; counter++){
+         System.out.println(fibonacci(counter));
+      }
+   }
+}
+o/p:
+ 
+ Q11 returns  true if divisible by 6
+class ddiv6{
+	public static void main(String[] felight){
+	boolean r=add(60);
+	System.out.println(r);
+	}
+
+public static boolean add(int n){
+	if(n % 6 == 0){
+		return true;
+	}
+	else 
+		return false;
+}
+}
+
+Op:
+ 
+
+Q12 display time
+class time{
+public static void main(String[] felight){ 
+   System.out.println("time in hour   is : " + add(18000));
+}
+public static int add(int i){
+	return  i/3600;	
+}
+}
+o/p:
+ 
+
+Q13 count number of digits
+class count{
+  public static void main(String[] felight)
+  {
+	System.out.println(add(1234));  
+  }
+  public static int add(int i)
+  {
+	  int n=0;
+	while(i>0)
+    {
+		i=i/10;
+        n++;		
+	}
+        return n;	
+  }
+  }
+o/p:
+ 
+Q 14 repeat digit
+class repdgt{
+	public  static void main(String[] felight)
+	{
+		int b=call.grep(123);
+		System.out.println(b);
+	}
+}
+o//p:
+ 
+Q 15 find value of its hunderad digit
+class vhun{
+  public static void main(String[] felight)
+  {
+	int b=call.hund(6785);
+		System.out.println(b);
+  }
+ }
+o/p:
+ 
+
+Q 16 calculate run rate
+class rrate
+{
+	public static void main(String[] felight)
+	{
+		System.out.println(call.grrate(326,49,210,33));
+	}
+}
+o/p:
+ 
+Q 17  make digit decimal
+class deci
+{
+	public static void main(String[] felight)
+	{
+		System.out.println(call.gdeci(0,0,6));
+	}
+}
+
+o/p:
+ 
+Q 18 sum of two digit
+class s2d
+{
+	public static void main(String[] felight)
+	{
+		System.out.println(call.gs2d(33));
+	}
+}
+o/p:
+ q19 add two Boolean
+
+class abln
+{
+	public static void main(String[] felight)
+	{
+		System.out.println(call.gbln(true,true,false));
+	}
+}
+Q20 if number is larger then any two return true else false
+class wif
+{
+	public static void main(String[] felight)
+	{
+      System.out.println(call.gwif(24,10,36));
+
+	}
+} 
+
+
+Q 21  chech numbers  is in ascending or not
+class wif1
+{
+	public static void main(String[] felight)
+	{
+      System.out.println(call.gwif1(10,20,30));
+
+	}
+}
+o/p: 
+
+q 22: sum of digits
+class sl4
+{
+	public static void main(String[] felight)
+	{
+      System.out.println(call.gsl4(12345));
+
+	}
+}
+Q 23 area of square
+class aofs
+{
+	public static void main(String[] felight)
+	{
+      System.out.println(call.gaofs(0,0,5,5));
+
+	}
+}
+
+o/p:
+ 
+Q 24)
+
+Number is divisible by 3 or 7 return true
+class div1
+{
+	public static void main(String[] felight)
+	{
+      System.out.println(call.gdiv1(58));
+
+	}
+}
+Q 25  find largest number
+class rmax
+{
+	public static void main(String[] felight)
+	{
+      System.out.println(call.grmax(100,200,300));
+
+	}
+}
+Q 26
+Print days in month
+class daym
+{
+	public static void main(String[] felight)
+	{
+      System.out.println(call.gdaym(4));
+
+	}
+}
+o/p:
+ 
+Q 27:
+Change character
+class changec
+{
+	public static void main(String[] felight)
+	{
+	System.out.println(call.gc('z'));
+	System.out.println(call.gcc('Z'));
+	System.out.println(call.gdd('8'));
+	}
+}
+Q 28
+Print middle character
+class findm
+{
+   public static void main(String[] felight)
+   {
+	   System.out.println(call.gfindm('a','x','X'));
+   }
+}
+Q 29 if last digit r same return true
+class sameld
+{
+   public static void main(String[] felight)
+   {
+	   System.out.println(call.gsameld(1234,3455));
+   }
+}
+
+Q 30  returns true  if sum of any two equals third one
+class sumofany2
+{
+   public static void main(String[] felight)
+   {
+	   System.out.println(call.gsameld1(1,3,2));
+   }
+}
+o/p:
+ 
+
+Q31
+Lottery  problem
+class lottery
+{
+   public static void main(String[] felight)
+   {
+	   System.out.println(call.glottery(21));
+   }
+}
+Q 32 lottery problem 2
+class lottery1
+{
+   public static void main(String[] felight)
+   {
+	   System.out.println(call.glottery1(56,8,49));
+   }
+}
+o/p:
+ 
+
+
+
+Q 33 reverce number
+class rev
+{
+   public static void main(String[] felight)
+   {
+	   System.out.println(call.grev(444567430));
+   }
+}
+Q 34
+Find perfect number
+class findperfectn
+{
+   public static void main(String[] felight)
+   {
+	   System.out.println(call.gper(24));
+   }
+}
+o/p:
+ 
+
+
