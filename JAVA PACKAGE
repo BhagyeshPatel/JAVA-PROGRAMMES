@@ -1,0 +1,58 @@
+package com.felight.ems.hr;
+public class employee
+{	
+	public int id;
+	public String name;
+	public double salary;
+	public void doSomething(){
+		System.out.println("doing");
+	}
+}
+package com.felight.ems.hr;
+import com.felight.ems.hr.employee;
+public class cno{
+	public static void main(String[] felight){
+		employee emp1 = new employee();
+		//emp1.id = 1;
+		//emp1.name = "raj";
+		//emp1.salary = 30000;
+		//System.out.println("employee id is:"+emp1.id);
+		//System.out.println("employee name is :"+emp1.name);
+		//System.out.println("employee salary is"+emp1.salary);
+		emp1.doSomething();
+		employee emp2 = new employee();
+	    emp2.id = 2;
+		emp2.name = "ketan";
+		emp2.salary = 25000;
+		System.out.println("-------------");
+		System.out.println("employee id is:"+emp2.id);
+		System.out.println("employee name is"+emp2.name);
+		System.out.println("employee salary is"+emp2.salary);
+		employee emp3 = new employee();
+	    emp3.id = 3;
+		emp3.name = "modi";
+		emp3.salary = 250000;
+		System.out.println("-------------");
+		System.out.println("employee id is"+emp3.id);
+		System.out.println("employee name is"+emp3.name);
+		System.out.println("employee salary is"+emp3.salary);
+		employee emp4 = new employee();
+	    //emp3.id = 2;
+		//emp3.name = "modi";
+		//emp3.salary = 2500000000;
+		System.out.println("-------------");
+		System.out.println(emp4.id);
+		System.out.println(emp4.name);
+		System.out.println(emp4.salary);
+		employee emp5 = new employee();
+	    //emp3.id = 2;
+		//emp3.name = "modi";
+		//emp3.salary = 2500000000;
+		System.out.println("-------------");
+		System.out.println(emp5.id);
+		System.out.println(emp5.name);
+		System.out.println(emp5.salary);	
+	}
+	
+}
+
