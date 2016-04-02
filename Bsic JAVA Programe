@@ -1,0 +1,139 @@
+Q1 print even number between 1000  t0 1020
+class  even
+{
+	public static void main(String[] felight)
+	{
+		for(int i=1001;i<1020;i++)
+		{
+			if(i  % 2 == 0)
+		       System.out.println("number is even\t"  +i );
+		}
+	}
+}
+Q2 print odd numbers  between 500 to 600
+class  odd
+{
+	public static void main(String[] felight)
+	{
+		for(int i=500;i<600;i++)
+		{
+			if(i  % 2 != 0)
+		       System.out.println("number is odd\t"  +i );
+		}
+	}
+}
+Q3prime or not
+class x
+{
+   public static void main (String[] args)
+   {		
+       int i =100;
+       int num =100;
+      System.out.println("Prime numbers from 100 to 200 are :");
+       for (i = 100; i <= 200; i++)         
+       { 		  	  
+          int counter=0; 	  
+          for(num =i; num>=1; num--)
+	  {
+             if(i%num==0)
+	     {
+ 		counter = counter + 1;
+	     }
+	  }
+	  if (counter ==2)
+	  {
+	     
+         System.out.println(i);
+	     
+	  }	
+       }	
+       
+       
+   }
+}
+Q4 check number is divisible by 6 or not
+class div6
+
+{
+	public static void main(String[] fellight)
+	{
+		int i;
+		for(i=1;i<100;i++)
+		{
+			if(i % 6 == 0)
+				System.out.println("divisible by 6\n" +i);
+		}
+	}
+}
+Q Fibonacci series
+class fibo
+{
+	public static void main(String[] felight)
+	{
+		int a=0,b=1,c=10,ii,i;
+		System.out.println("fibonacci series are");
+		System.out.println(a+" \n "+b);
+		for(i=2;i<c;i++)
+		{
+			ii=a+b;
+			System.out.println(" "+ii);
+			a=b;
+			b=ii;
+		}
+	}
+}
+Q using while loop print even nos
+class whloopp
+
+{
+	public static void main(String[] fellight)
+	{
+	int  i = 0;
+	while(i<=100)
+	{
+	if(i % 2 == 0)
+	System.out.println("even no " +i);
+      i++;
+	}
+	}
+}
+Q : addition of octal nos
+class addo
+{
+	public static void main(String[] felight)
+    {
+	String input0 = "5";
+     String input1 = "3";  
+    int number0 = Integer.parseInt(input0, 8);
+    int number1 = Integer.parseInt(input1, 8);
+    int sum = number0 + number1;
+	System.out.println(sum);
+	}
+}	
+Q: addition of binary nos
+class addb
+{
+	public static void main(String[] felight)
+    {
+	String input0 = "1010";
+     String input1 = "10";  
+    int number0 = Integer.parseInt(input0, 2);
+    int number1 = Integer.parseInt(input1, 2);
+    int sum = number0 + number1;
+	System.out.println(sum);
+	}
+}	
+Q: addition of binary nos
+class addb
+{
+	public static void main(String[] felight)
+    {
+	String input0 = "1010";
+     String input1 = "10";  
+    int number0 = Integer.parseInt(input0, 2);
+    int number1 = Integer.parseInt(input1, 2);
+    int sum = number0 + number1;
+	System.out.println(sum);
+	}
+}	
+
