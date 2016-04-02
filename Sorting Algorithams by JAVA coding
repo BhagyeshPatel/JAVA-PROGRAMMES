@@ -1,0 +1,124 @@
+import java.util.*;
+class CoreJavaProject{
+	public static void main(String[] felight){
+		int[] array=null;
+		int size=0;
+		long stime = 0,etime = 0;
+		char ch;
+		  Scanner in = new Scanner(System.in);
+		      System.out.println("-----Enter the size of array------\n");
+		        try{
+		             size = in.nextInt();
+		           }catch(InputMismatchException ex){
+			                System.out.println("Enter integer only...");
+			                System.exit(0);
+		                }
+		 System.out.println("Size of array has been cosidered!!!!!\n");
+		do{
+	          System.out.println("-------Select The Case------");
+		      System.out.println("1.Best Case");
+		      System.out.println("2.Average Case");
+		      System.out.println("3.Wrost Case\n");
+		      int choice = in.nextInt();
+		      System.out.println();
+		         switch(choice){
+			         case 1: array = cal.garray(size);
+			                 System.out.println("Araay for best case has generated!!!!!\n");
+			                 break;
+			         case 2: array = cal.grarray(size);
+                             System.out.println("Araay for average case has generated!!!!!\n");			
+			                 break;
+			         case 3: int[] desc1 =  cal.garray(size);
+			                 int[] desc2 = cal.gbubble(desc1);
+					         array = cal.greverse(desc2);
+					         System.out.println("Araay for wrost case has generated!!!!\n");		
+                             break;
+                             default: System.out.println("Enter vaid choice");			
+		                    }
+		       System.out.println("-----Now select any sorting method-----");		
+		       System.out.println("1.Bubble Sort");
+		       System.out.println("2.Merge Sort");
+		       System.out.println("3.Selection Sort");
+		       System.out.println("4.Heap Sort");
+		       System.out.println("5.Quick Sort");
+		       System.out.println("6.Insertion Sort");
+		       System.out.println("7.Bentchmark all");
+		       System.out.println("Select The Method\n");
+		          int choice1 = in.nextInt();
+		
+		          switch(choice1){
+			                case 1: int[] arrayb = array.clone();
+			                        stime = System.currentTimeMillis();
+			                        int[] arraybs = cal.gbubble(arrayb);
+					                etime = System.currentTimeMillis();
+					                System.out.println("Time tacken for soring by buuble sort is:"+(etime-stime)+"ms");
+					                break;
+			                case 2:	int[] arraym = array.clone();
+			                       stime = System.currentTimeMillis();
+			                        int[] arrayms = cal.gmerge(arraym,0,arraym.length);
+					                etime = System.currentTimeMillis();
+					                System.out.println("Time tacken for soring by merge sort is:"+(etime-stime)+"ms");
+					                break; 
+                           case 3:	int[] arrays = array.clone();
+			                       stime = System.currentTimeMillis();
+			                        int[] arrayss = cal.gsel(arrays);
+					               etime = System.currentTimeMillis();
+					                System.out.println("Time tacken for soring by  selectiion sort is:"+(etime-stime)+"ms");
+					                 break; 
+                            case 4:   int[] arrayh = array.clone();
+			                        stime = System.currentTimeMillis();
+			                        int[] arrayhs = cal.gheap(arrayh);
+					               etime = System.currentTimeMillis();
+					                System.out.println("Time tacken for soring by heap sort is:"+(etime-stime)+"ms");
+					                break; 
+                            case 5: int[] arrayq = array.clone();
+			                        stime = System.currentTimeMillis();
+			                        int[] arrayqs = cal.gquick(arrayq,0,arrayq.length-1);
+					                etime = System.currentTimeMillis();
+					                 System.out.println("Time tacken for soring by quick sort is:"+(etime-stime)+"ms");
+					                break; 	
+                           case 6: int[] arrayi = array.clone();
+			                       stime = System.currentTimeMillis();
+			                       int[] arrayis = cal.gisort(arrayi);
+					               etime = System.currentTimeMillis();
+				                    System.out.println("Time tacken for soring by insertion sort is:"+(etime-stime)+"ms");
+					                break;
+                            case 7:	int[] arrayb1 = array.clone();
+			                        stime = System.currentTimeMillis();
+			                        int[] arraybs1 = cal.gbubble(arrayb1);
+					                etime = System.currentTimeMillis();
+					                System.out.println("Time tacken for soring by buuble sort is:     "+(etime-stime)+"ms\n");
+				                    int[] arraym1 = array.clone();
+			                        stime = System.currentTimeMillis();
+			                        int[] arrayms1 = cal.gmerge(arraym1,0,arraym1.length);
+				                 	 etime = System.currentTimeMillis();
+				                	System.out.println("Time tacken for soring by merge sort is:      "+(etime-stime)+"ms\n"); 
+                 	                int[] arrays1 = array.clone();
+			                        stime = System.currentTimeMillis();
+			                        int[] arrayss1 = cal.gsel(arrays1);
+					                etime = System.currentTimeMillis();
+					                System.out.println("Time tacken for soring by  selectiion sort is:"+(etime-stime)+"ms\n"); 
+                                    int[] arrayh1 = array.clone();
+			                        stime = System.currentTimeMillis();
+			                        int[] arrayhs1 = cal.gheap(arrayh1);
+					                etime = System.currentTimeMillis();
+					                System.out.println("Time tacken for soring by heap sort is:       "+(etime-stime)+"ms\n");
+                                       int[] arrayq1 = array.clone();
+			                        stime = System.currentTimeMillis();
+			                        int[] arrayqs1 = cal.gquick(arrayq1,0,arrayq1.length-1);
+					                etime = System.currentTimeMillis();
+					                System.out.println("Time tacken for soring by quick sort is:      "+(etime-stime)+"ms\n");	
+                                     int[] arrayi1 = array.clone();
+			                        stime = System.currentTimeMillis();
+			                       int[] arrayis1 = cal.gisort(arrayi1);
+					              etime = System.currentTimeMillis();
+					                System.out.println("Time tacken for soring by insertion sort is:  "+(etime-stime)+"ms\n");
+					               break;				
+			            default :System.out.println("Enter vaid choice");	
+			                       break;
+		                    }
+		       System.out.println("If You Want To Contiinioue Enter y or Y !!!!");
+		       ch=in.next().charAt(0);
+		}while(ch=='Y' || ch=='y');
+     }
+  }
