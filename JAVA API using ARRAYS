@@ -1,0 +1,797 @@
+created class cal
+for all program
+import java.util.Scanner;
+ class cal
+{
+	private static int N;
+    
+     public static void parray(int[] array)
+        {
+ 	       for(int i=0; i < array.length; i++)
+		   {
+             System.out.println(array[i]);			 
+		   }
+              		   
+		}
+		
+		public static int[] garray(int howmany)
+		{
+			int[] array = new int[howmany];
+			for(int i=0; i < array.length; i++)
+			{
+				array[i]=i+1;
+			}
+			return array;
+		}
+		public static int[] grarray(int howmany)
+		{
+			int[] array = new int[howmany];
+			for(int i=0; i < array.length; i++)
+			{
+				//array[i] = Math.random();
+			}
+			return array;
+		}
+		public static int gsarray(int howmany)
+		{
+			int[] array = new int[howmany];
+			int s = 0;
+			for(int i=0; i < array.length; i++)
+			{
+				array[i]=i+1;
+				s=s+array[i];
+			}
+			return s;
+		}
+		public  static int[] geven(int from,int to)
+		{
+			int[] array = new int[((to-from)/2)+1];
+			int ii=0;
+			for(int i=from;i<=to;i++)
+			{
+				if(i % 2 == 0)
+					
+					{
+						array[ii]=i;
+						ii++;
+					}
+					
+			}
+			return array;
+		}
+		public  static int[] godd(int from,int to)
+		{
+			int[] array = new int[((to-from)/2)+1];
+			int ii=0;
+			for(int i=from;i<=to;i++)
+			{
+				if(i % 2 != 0)
+					
+					{
+						array[ii]=i;
+						ii=ii+1;
+					}
+					
+			}
+			return array;
+		}
+		public  static int[] gprime(int from,int to)
+		{
+			int ii=0;
+			int[] array = new int[(to-from)/2];
+			for(int i=from;i<=to;i++)
+			{
+				int counter=0; 	  
+                for(int  num =i; num>=1; num--)
+	               {
+                        if(i%num==0)
+	                        {
+ 		                       counter = counter + 1;
+	                        }
+	                }
+	                if (counter ==2)
+	                {
+	     
+                            array[ii]=i;
+							ii++;
+	     
+	                }	
+		    }
+			return array;
+		}
+		public  static int[] gfibona(int n)
+		{
+			int[] array = new int[n];
+			int ii=0;
+			for (int counter = 0; counter <n; counter++)
+			{
+				if ((counter == 0) || (counter == 1))
+				{
+					    array[ii]=counter;
+					    ii++;
+				}
+                   else
+				   {
+					   array[ii]= (array[ii-1] + (array[ii-2]));
+					   ii++;
+				   }
+			}
+			return array;
+			
+		}
+		public  static int[] greverse(int[] array1)
+		{
+			int[] array = new int[(array1.length)];
+			int ii=0;
+			for(int i=array1.length;i>0;i--)
+			{
+				array[ii]=i;
+				ii++;
+				
+			}
+			return array;
+		}
+		public  static int gvo(char[] array1)
+		{
+			int c=0;
+			for(int i=0;i<array1.length;i++)
+			{
+				if(array1[i] == 'a' || array1[i] == 'A' || array1[i] == 'e' || array1[i] == 'E' || array1[i] == 'i' || 
+			array1[i] == 'I' || array1[i] == 'o' || array1[i] == 'O' || array1[i] == 'u' || array1[i] == 'U')
+				{
+					c++;
+				}	
+			}
+			return c;
+		}
+		public static int[][] gmat()
+		{
+			int a,b;
+		     Scanner in = new Scanner(System.in);
+		     System.out.println("Enter the number of rows and columns of matrix");
+              a = in.nextInt();
+               b  = in.nextInt();
+			   int array[][] = new int[a][b];
+			   System.out.println("Enter the elements of  matrix");
+			    for(int i=0;i<a;i++)
+				for(int j=0;j<b;j++)
+					array[i][j] = in.nextInt();
+				 return array;
+		}
+		public static int[][] gsmat(int[][] a1,int[][] b1)
+		{   
+		    int[][]  sum = new  int[a1.length][b1.length];
+			for (int c = 0 ; c < a1.length ; c++ )
+               for (int  d = 0 ; d <a1[c].length ; d++ )
+             sum[c][d] = a1[c][d] + b1[c][d]; 
+		           return sum;
+
+		}
+		
+		public static void pmat(int[][] c1)
+		{
+			for (int c = 0 ; c < c1.length ; c++ )
+			{
+               for (int  d = 0 ; d <c1[c].length ; d++ )
+			   {
+				   System.out.print(c1[c][d] + "\t");
+			     }
+			System.out.println();
+			}    
+		}
+         public static int[][] gmmat(int[][] a1,int[][] b1)
+		{   
+		    int[][]  sum = new  int[a1.length][b1.length];
+			for (int c = 0 ; c < a1.length ; c++ )
+               for (int  d = 0 ; d <a1[c].length ; d++ )
+             sum[c][d] = a1[c][d] * b1[c][d]; 
+		           return sum;
+
+		}	
+         public static void gtri(int n)	
+		 {
+			  int z=1;
+                  
+                 for (int i=0; i<n; i++)
+                  {
+                       for (int j=n; j>i; j--)
+                            {
+                                 System.out.print(" "); 
+                             }
+                                System.out.print("*");   
+                             if (i!=0)
+                              {
+                                    for (int k=1; k<=z; k++)
+                                      {
+                                          System.out.print(" ");
+                                       }
+                                System.out.print("*"); 
+                                 z+=2;
+                              }
+                          System.out.println();
+                  }
+
+                    for (int i=0; i<=z+1; i++)
+                         {
+                              System.out.print("*");
+                          }
+						  
+		 }
+          public static int rrate(int... numbers)	
+		  {
+               int total = 0;
+               for (int i = 0; i < numbers.length; i++)
+                   total += numbers[i];
+               return total / numbers.length;
+   
+		  }
+         public static int[] gbubble(int[] arr)
+		 {    
+		     int  swap;
+			 for (int c = 0; c <  (arr.length - 1) ; c++) 
+			 {
+              for (int  d = 0; d < arr.length - c - 1 ; d++)
+				  {
+                      if (arr[d] > arr[d+1]) 
+                         {
+                            swap = arr[d];
+                            arr[d]   = arr[d+1];
+                            arr[d+1] = swap;
+                        }
+                  }
+             }
+			 return arr;
+		 }	
+		 public static int[] gip()
+		{
+			int n;
+		     Scanner in = new Scanner(System.in);
+		     System.out.println("Enter the number of elements of array");
+              n = in.nextInt();           
+			   int[] a1 = new int[n];
+			   System.out.println("Enter the elements of  array");
+			    for(int i=0;i<n;i++)
+					a1[i] = in.nextInt();
+				 return a1;
+		}
+		
+			public static int[] gmerge(int[] a, int low, int high) 
+            {
+                     int N = high - low;         
+                    if (N <= 1) 
+                        return a; 
+                   int mid = low + N/2; 
+                    gmerge(a, low, mid); 
+                     gmerge(a, mid, high); 
+                    int[] temp = new int[N];
+                     int i = low, j = mid;
+                           for (int k = 0; k < N; k++) 
+                                {
+                                     if (i == mid)  
+                                        temp[k] = a[j++];
+                                     else if (j == high) 
+                                        temp[k] = a[i++];
+                                     else if (a[j]<a[i]) 
+                                       temp[k] = a[j++];
+                                    else 
+                                      temp[k] = a[i++];
+                                }    
+                         for (int k = 0; k < N; k++) {
+		                     a[low + k] = temp[k];  
+		                    }
+                     return a;		
+            }
+			 public static int[] gquick(int arr[], int low, int high) 
+    {
+        int i = low, j = high;
+        int temp;
+        int pivot = arr[(low + high) / 2];
+        while (i <= j) 
+        {
+            while (arr[i] < pivot)
+                i++;
+            while (arr[j] > pivot)
+                j--;
+            if (i <= j) 
+            {
+                /** swap **/
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+ 
+                i++;
+                j--;
+            }
+        }
+        if (low < j)
+            gquick(arr, low, j);
+        if (i < high)
+            gquick(arr, i, high);
+		return arr;
+    }
+	public static int[] gsel( int arr[] )
+	{
+        int N = arr.length;
+        int i, j, pos, temp;
+        for (i = 0; i < N-1; i++)
+        {
+            pos = i;
+            for (j = i+1; j < N; j++)
+            {
+                if (arr[j] < arr[pos])
+                {
+                    pos = j;
+                }
+            }
+            /* Swap arr[i] and arr[pos] */
+            temp = arr[i];
+            arr[i] = arr[pos];
+            arr[pos]= temp;            
+        } 
+       return arr;		
+    }
+	public static int gb(int[] array)
+	{
+	int search;
+    Scanner in = new Scanner(System.in);
+	System.out.println("Enter value to find");
+    search = in.nextInt();
+    int first  = 0;
+    int last   = array.length - 1;
+    int middle = (first + last)/2;
+ 
+    while( first <= last )
+    {
+      if ( array[middle] < search )
+        first = middle + 1;    
+      else if ( array[middle] == search ) 
+      {
+        //System.out.println(search + " found at location " + (middle + 1) + ".");
+		//return array[middle];
+		break;
+      }
+      else
+         last = middle - 1;
+ 
+      middle = (first + last)/2;
+     }
+   if ( first > last )
+   {
+     // System.out.println(search + " is not present in the list.\n");
+	 return -1;
+   }
+	 else
+       return middle+1;
+	}
+    public static int gl(int[] array)
+	{
+		int c,b;
+	int search;
+    Scanner in = new Scanner(System.in);
+	System.out.println("Enter value to find");
+    search = in.nextInt();
+	 for (c = 0; c < array.length; c++)
+    {
+      if (array[c] == search)    
+      {
+         //System.out.println(search + " is present at location " + (c + 1) + ".");
+		return b = c+1;
+          //break;
+      }
+     }
+       if (c == array.length) 
+      System.out.println(search + " is not present in array.");
+      return -1;
+       
+	}
+	public static int[] gisort(int[] arr)
+	{
+        int i, j, temp;
+        for (i = 1; i< arr.length; i++) 
+        {
+            j = i;
+            temp = arr[i];    
+            while (j > 0 && temp < arr[j-1])
+            {
+                arr[j] = arr[j-1];
+                j = j-1;
+            }
+            arr[j] = temp;            
+        }  
+         return arr;		
+	}
+	public static int[] gheap(int[] arr)
+	{
+		//public class HeapSort 
+//{    
+  // private static int N;
+    /* Sort Function */
+   // public static void sort(int arr[])
+   // {       
+        heapify(arr);        
+        for (int i = N; i > 0; i--)
+        {
+            swap(arr,0, i);
+            N = N-1;
+            maxheap(arr, 0);
+        }
+		return arr;
+    }     
+    /* Function to build a heap */   
+    public static void heapify(int arr[])
+    {
+        N = arr.length-1;
+        for (int i = N/2; i >= 0; i--)
+            maxheap(arr, i);        
+    }
+    /* Function to swap largest element in heap */        
+    public static void maxheap(int arr[], int i)
+    { 
+        int left = 2*i ;
+        int right = 2*i + 1;
+        int max = i;
+        if (left <= N && arr[left] > arr[i])
+            max = left;
+        if (right <= N && arr[right] > arr[max])        
+            max = right;
+ 
+        if (max != i)
+        {
+            swap(arr, i, max);
+            maxheap(arr, max);
+        }
+    }    
+    /* Function to swap two numbers in an array */
+    public static void swap(int arr[], int i, int j)
+    {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp; 
+    }    
+	
+}
+
+Q1 print natural array
+
+class anatural
+{
+	public static void main(String[] felight)
+	{
+	      System.out.println("natural   numbers   are");
+		  int[] array = cal.garray(10);
+		  cal.parray(array); 
+	}
+}
+
+output:
+
+
+
+ 
+
+Q2 summation of all elements in array
+
+
+class arraysum{
+	public static void main(String[] felight)
+	{
+	   int s = cal.gsarray(9);
+	   System.out.println(s);
+	}
+}
+
+Output:
+ 
+Q3 even numbers from to to
+
+class aeven
+{
+	public static void main(String[] fellight)
+	{
+		int[] array = cal.geven(101,201);
+		cal.parray(array);
+	}
+}
+Output
+ 
+
+Q4  array of odd 
+
+class aodd
+{
+	public static void main(String[] fellight)
+	{
+		int[] array = cal.godd(11,21);
+		cal.parray(array);
+	}
+}
+
+
+Output
+
+ 
+
+
+Q5  araay of prime number
+
+class aprime
+{
+	public static void main(String[] fellight)
+	{
+	int[] array = cal.gprime(100,200);
+	cal.parray(array);
+	}
+}
+
+
+
+Output:
+
+ 
+
+
+
+
+Q7 generate Fibonacci 
+
+
+class afibona
+{
+	public static void main(String[] fellight)
+    {
+		int[] array = cal.gfibona(6);
+		cal.parray(array);
+	}
+}
+
+
+Output:
+
+
+ 
+
+
+
+
+Q8 reverse array
+class areverse
+{
+	public static void main(String[] felight)
+	{
+	int[] array=cal.garray(10);
+	int[] array1=cal.greverse(array);
+	cal.parray(array1);
+	}
+}
+
+
+Output:
+ 
+
+
+Q9     count vowels in array 
+class avo
+{
+	public static void main(String[] fellight)
+    {
+		char[] array = {'f','e','l','i','g','h','t'};
+		int a = cal.gvo(array);
+		System.out.println(a);
+	}
+}
+
+Output:
+ 
+
+
+
+Q10  summation of matrix
+
+
+class smat
+{
+	public static void main(String[] felight)
+	{
+			int[][] a = cal.gmat();
+			int[][] b = cal.gmat();
+			int[][] c = cal.gsmat(a,b);
+			System.out.println("sum of matrix is :\n");
+			cal.pmat(c);
+	}
+}
+
+
+Output:
+
+ 
+
+
+
+Q11 maltiplication of matrix
+class mmat
+{
+	public static void main(String[] felight)
+	{
+			int[][] a = cal.gmat();
+			int[][] b = cal.gmat();
+			int[][] c = cal.gmmat(a,b);
+			System.out.println("mulltiplication of matrix is :\n");
+			cal.pmat(c);
+	}
+}
+
+Output:
+
+ 
+
+
+Q12  create triangle
+
+class tri
+{
+        public static void main(String[] felight)
+      {	
+ 
+        cal.gtri(12);
+        
+	
+
+      }
+}
+
+Output:
+ 
+
+
+Q13 calculate run rate
+
+class acalrrate
+{
+	public  static  void main(String[] felight)
+	{
+		int avg1 = cal.rrate(2,2,2,2,2);
+	    System.out.println(avg1);
+	}
+}
+
+Output:
+ 
+
+Q  14 bubble sort
+
+class bubble
+{
+        public static void main(String[] felight)
+		{
+		//int[] a1=cal.garray(10);
+		int[] c1=cal.gip();
+        int[] b1=cal.gbubble(c1);
+		System.out.println("sorted elements");
+         cal.parray(b1);		
+		}	
+}	  
+
+Output:
+   
+
+
+Q 15  merge sort 
+class merge
+{
+        public static void main(String[] felight)
+		{
+		int[] c1=cal.gip();
+        int[] b1=cal.gmerge(c1,0,c1.length);
+		System.out.println("sorted elementes are:");
+              cal.parray(b1);		
+		}	
+}	  
+
+
+o/p:
+ 
+
+Q 16 quick sort
+class quick
+{
+        public static void main(String[] felight)
+		{
+		//int[] a1=cal.garray(10);
+		int[] c1=cal.gip();
+        int[] b1=cal.gquick(c1,0,c1.length-1);
+		System.out.println("sorted elements");
+         cal.parray(b1);		
+		}	
+}	  
+
+
+o/p:
+ 
+
+Q 17 selection sort
+class sel
+{
+        public static void main(String[] felight)
+		{
+		//int[] a1=cal.garray(10);
+		int[] c1=cal.gip();
+        int[] b1=cal.gsel(c1);
+		System.out.println("sorted elements");
+         cal.parray(b1);		
+		}	
+}	  
+
+
+o//p:
+ 
+
+
+
+Q 18 )  binary search
+class bsearch
+{
+        public static void main(String[] felight)
+		{
+		
+		int[] c1=cal.gip();
+        int b=cal.gb(c1);
+		System.out.println("element status at position: " + b);
+         	
+		}	
+}	  
+o/p:
+ 
+
+Q 19 :
+class lsearch
+{
+        public static void main(String[] felight)
+		{
+		
+		int[] c1=cal.gip();
+        int b=cal.gl(c1);
+		System.out.println("element status at position: " + b);
+         	
+		}	
+}	  
+
+ 
+
+
+Q21 insertion sort
+
+class isort
+{
+        public static void main(String[] felight)
+		{
+		
+		int[] c1=cal.gip();
+        int[] b=cal.gisort(c1);
+		System.out.println("sorted elements are:");
+		cal.parray(b);
+         	
+		}	
+}	  
+
+
+Output:
+ 
+
+
+Q22 heap sort
+
+class heap
+{
+        public static void main(String[] felight)
+		{
+		
+		int[] c1=cal.gip();
+        int[] b=cal.gheap(c1);
+		System.out.println("sorted elements are:");
+		cal.parray(b);
+         	
+		}	
+}	  
+
+
+o/p:
